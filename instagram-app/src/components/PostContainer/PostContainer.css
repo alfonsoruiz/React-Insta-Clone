@@ -1,3 +1,33 @@
 .post-container {
-    border: 5px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-header {
+    display: flex;
+    padding: 10px 0 10px 10px;
+}
+
+.user-name {
+    font-size: 1rem;
+}
+
+.header-thumbnail {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.post {
+    width: 700px;
+    border: 1px solid lightgrey;
+    margin-bottom: 50px;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
 }

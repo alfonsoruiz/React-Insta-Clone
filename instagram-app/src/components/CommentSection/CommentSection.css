@@ -1,0 +1,24 @@
+.comment-section h2,
+.comment-section p {
+    margin: 0 0;
+}
+
+.comment-section {
+    padding: 10px;
+}
+
+.comment {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.comment-user,
+.comment-text {
+    font-size: .9rem;
+    border: 1px solid red;
+}
+
+.comment-user {
+    margin-right: 50px;
+}
