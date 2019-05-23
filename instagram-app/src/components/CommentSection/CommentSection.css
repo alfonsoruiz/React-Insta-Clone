@@ -1,24 +1,36 @@
-.comment-section h2,
-.comment-section p {
-    margin: 0 0;
+.comment-section {
+    padding-top: 15px;
 }
 
-.comment-section {
-    padding: 10px;
+.comment p {
+    margin: 0;
 }
 
 .comment {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 10px;
+    padding: 0 15px 0 15px;
+    text-align: left;
+    line-height: 1.25rem;
+    margin-bottom: 7px;
 }
 
-.comment-user,
-.comment-text {
-    font-size: .9rem;
-    border: 1px solid red;
+.comment span {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.comment-user {
-    margin-right: 50px;
+input {
+    margin-top: 15px;
+    width: 98.4%;
+    height: 50px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-top: 1px solid lightgrey;
+    padding-left: 10px;
+    font-size: 1rem;
 }
+
+input:focus {
+    outline: none;
+}
+

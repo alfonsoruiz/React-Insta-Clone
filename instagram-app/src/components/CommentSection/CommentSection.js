@@ -15,10 +15,10 @@ class CommentSection extends React.Component {
             <div className="comment-section">
                 {this.state.comments.map(item => (
                     <div className="comment" key={item.id}>
-                        <h2 className="comment-user">{item.username}</h2>
-                        <p classname="comment-text">{item.text}</p>
+                        <p><span>{item.username}</span> {item.text}</p>
                     </div>
                 ))}
+                <input placeholder="Add a comment..."/>
             </div>
         );
     }
