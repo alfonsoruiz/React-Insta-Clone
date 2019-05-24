@@ -2,23 +2,23 @@
     padding-top: 15px;
 }
 
-.comment p {
+.comment-section .comment p {
     margin: 0;
 }
 
-.comment {
+.comment-section .comment {
     padding: 0 15px 0 15px;
     text-align: left;
     line-height: 1.25rem;
     margin-bottom: 7px;
 }
 
-.comment span {
+.comment-section .comment span {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-input {
+.comment-section input {
     margin-top: 15px;
     width: 98.4%;
     height: 50px;
@@ -30,7 +30,21 @@ input {
     font-size: 1rem;
 }
 
-input:focus {
+.comment-section input:focus {
     outline: none;
 }
 
+.comment-controls {
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-controls i {
+    margin-right: 15px;
+    font-size: 1.25rem;
+}
+
+.comment-section .post-likes {
+    font-weight: bold;
+    font-size: .9rem;
+}
