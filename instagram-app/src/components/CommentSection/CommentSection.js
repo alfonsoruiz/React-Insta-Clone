@@ -1,5 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -15,8 +16,8 @@ class CommentSection extends React.Component {
         return (
             <div className="comment-section">
                 <div className="comment-controls">
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-comment"></i>
                     <p className="post-likes">Likes {this.state.likes}</p>
                 </div>
 
@@ -29,6 +30,11 @@ class CommentSection extends React.Component {
             </div>
         );
     }
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    likes: PropTypes.number.isRequired
 }
 
 export default CommentSection;
