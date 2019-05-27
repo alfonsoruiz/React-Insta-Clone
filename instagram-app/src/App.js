@@ -12,6 +12,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMoun() {
+    this.setState({ data: dummyData });
+  }
+
   render() {
     return (
       <div className="App">

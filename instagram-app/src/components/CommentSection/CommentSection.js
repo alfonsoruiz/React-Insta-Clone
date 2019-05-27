@@ -1,15 +1,33 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Comment from './Comment';
+import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: '',
+            comment: '',
             comments: props.comments,
             likes: props.likes
-        }
+        };
+    }
+
+    addNewComment = event => {
+        event.preventDefault();
+
+        this.setState( {
+            comments: [
+                ...this.state.comments,
+                {username: 'Rupert', id: String(this.state.comments.length + 1), text: this.state.comment}
+            ], 
+            comment: ''
+        });
+    };
+
+    captureComment = event => {
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     render() {
@@ -22,11 +40,14 @@ class CommentSection extends React.Component {
                 </div>
 
                 {this.state.comments.map(item => (
-                    <div className="comment" key={item.id}>
-                        <p><span>{item.username}</span> {item.text}</p>
-                    </div>
+                    <Comment comment={item} key={item.id} />
                 ))}
-                <input placeholder="Add a comment..."/>
+
+                <CommentInput 
+                    comment={this.state.comment} 
+                    captureComment={this.captureComment}
+                    addNewComment={this.addNewComment}
+                />
             </div>
         );
     }
