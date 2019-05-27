@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const CommentInput = props => {
     return (
@@ -12,6 +13,10 @@ const CommentInput = props => {
             />
         </form>
     )
+}
+
+CommentInput.propTypes = {
+    comment: PropTypes.string.isRequired
 }
 
 export default CommentInput
