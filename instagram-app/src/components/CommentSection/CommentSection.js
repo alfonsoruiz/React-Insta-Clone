@@ -3,6 +3,8 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
+import CommentControls from './CommentControls';
+import Likes from './Likes';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -33,11 +35,8 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className="comment-section">
-                <div className="comment-controls">
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
-                    <p className="post-likes">Likes {this.state.likes}</p>
-                </div>
+                <CommentControls />
+                <Likes likes={this.props.likes}/>
 
                 {this.state.comments.map(item => (
                     <Comment comment={item} key={item.id} />

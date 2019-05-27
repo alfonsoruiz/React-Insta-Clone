@@ -16,6 +16,7 @@
 .comment-section .comment span {
     font-weight: bold;
     margin-bottom: 5px;
+    margin-right: 7px;
 }
 
 .comment-section input {
@@ -37,6 +38,8 @@
 .comment-controls {
     padding-left: 15px;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .comment-controls i {
@@ -47,4 +50,5 @@
 .comment-section .post-likes {
     font-weight: bold;
     font-size: .9rem;
+    padding-left: 15px;
 }
