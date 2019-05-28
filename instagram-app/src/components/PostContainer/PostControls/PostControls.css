@@ -1,0 +1,11 @@
+.post-controls {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.post-controls i {
+    margin-right: 15px;
+    font-size: 1.25rem;
+}

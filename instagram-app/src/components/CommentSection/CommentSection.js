@@ -1,18 +1,15 @@
 import React from 'react';
+import Comment from './Comment/Comment';
+import CommentInput from './CommentInput/CommentInput';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
-import CommentInput from './CommentInput';
-import CommentControls from './CommentControls';
-import Likes from './Likes';
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             comment: '',
-            comments: props.comments,
-            likes: props.likes
+            comments: props.comments
         };
     }
 
@@ -35,8 +32,6 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className="comment-section">
-                <CommentControls />
-                <Likes likes={this.props.likes}/>
 
                 {this.state.comments.map(item => (
                     <Comment comment={item} key={item.id} />

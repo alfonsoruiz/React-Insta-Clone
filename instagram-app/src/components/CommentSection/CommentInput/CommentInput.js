@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import './CommentInput.css';
+import PropTypes from 'prop-types';
 
 const CommentInput = props => {
     return (
-        <form onSubmit={props.addNewComment}>
+        <form className="comment-input" onSubmit={props.addNewComment}>
             <input 
                 type="text"
                 value={props.comment}
@@ -12,7 +13,7 @@ const CommentInput = props => {
                 onChange={props.captureComment}
             />
         </form>
-    )
+    );
 }
 
 CommentInput.propTypes = {

@@ -1,0 +1,10 @@
+.post {
+    width: 700px;
+    border: 1px solid lightgrey;
+    margin-bottom: 50px;
+}
+
+.post .post-img {
+    width: 100%;
+    height: auto;
+}
