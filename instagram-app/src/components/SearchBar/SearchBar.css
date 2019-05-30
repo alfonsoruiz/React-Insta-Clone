@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
 
 .search-bar {
-    border: 1px solid lightgrey;
-    margin-bottom: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 950px;
+    margin: 0 auto 70px auto;
 }
 
 .search-bar h1 {
@@ -26,19 +24,6 @@
 .search-bar .logo-section {
     display: flex;
     align-items: center;
-}
-
-.search-bar input {
-    height: 20px;
-    width: 20%;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-}
-
-.search-bar input:focus {
-    outline: none;
 }
 
 .search-bar i {
