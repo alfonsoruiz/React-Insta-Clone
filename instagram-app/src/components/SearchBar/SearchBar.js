@@ -9,7 +9,7 @@ const SearchBar = props => {
                 <i className="fab fa-instagram"></i>
                 <h1>Instagram</h1>
             </div>
-            <SearchInput captureInput={props.captureInput} filterPost={props.filterPost}/>
+            <SearchInput captureInput={props.captureInput} filterPost={props.filterPost} search={props.search} />
             <div className="user-controls">
                 <i className="far fa-compass"></i>
                 <i className="far fa-user"></i>

@@ -22,15 +22,26 @@ class App extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  // filterPost = event => {
-    
-  // }
+  filterPost = event => {
+    event.preventDefault();
+    console.log('filterPost triggered')
+    const post = this.state.data.filter(post => {
+      return post.username === this.state.search;
+    });
+    this.setState({ 
+      filterdArray: post, 
+      search: ''
+    });
+  }
+
+
 
   render() {
     return (
       <div className="App">
-        <SearchBar captureInput={this.captureInput} filterPost={this.filterPost}/>
-        <PostContainer post={this.state.data} />
+        <SearchBar captureInput={this.captureInput} filterPost={this.filterPost} search={this.state.search}/>
+        <PostContainer post={(this.state.filterdArray.length < 1) ? this.state.data : this.state.filterdArray}
+        />
       </div>
     );
   }

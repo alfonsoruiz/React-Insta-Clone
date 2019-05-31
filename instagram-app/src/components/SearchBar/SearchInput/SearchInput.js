@@ -7,7 +7,7 @@ const SearchInput = props => {
             <input
                 className="search-input"
                 type="text"
-                value={props.searchQuery}
+                value={props.search}
                 placeholder="search"
                 name="search"
                 onChange={props.captureInput}

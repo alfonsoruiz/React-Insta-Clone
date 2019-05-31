@@ -1,16 +1,12 @@
-.search-input {
+form {
     width: 30%;
 }
 
 .search-input {
     height: 15px;
-   width: 30%;
+    width: 100%;
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
-}
-
-.search-input input:focus {
-    outline: none;
 }
