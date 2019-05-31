@@ -9,6 +9,8 @@ class App extends React.Component {
     super();
     this.state = {
       data : [],
+      search: '',
+      filterdArray: []
     }
   }
 
@@ -16,11 +18,19 @@ class App extends React.Component {
     this.setState({ data: dummyData });
   }
 
+  captureInput = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  // filterPost = event => {
+    
+  // }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer post={this.state.data}/>
+        <SearchBar captureInput={this.captureInput} filterPost={this.filterPost}/>
+        <PostContainer post={this.state.data} />
       </div>
     );
   }

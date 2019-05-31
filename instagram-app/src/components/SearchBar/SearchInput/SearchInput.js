@@ -3,14 +3,16 @@ import './SearchInput.css';
 
 const SearchInput = props => {
     return (
-        <input
-            className="search-input"
-            type="text"
-            value={props.searchQuery}
-            placeholder="search"
-            name="search"
-            onChange={props.captureInput}
-        />
+        <form onSubmit={props.filterPost}>
+            <input
+                className="search-input"
+                type="text"
+                value={props.searchQuery}
+                placeholder="search"
+                name="search"
+                onChange={props.captureInput}
+            />
+        </form>
     );
 }
 
