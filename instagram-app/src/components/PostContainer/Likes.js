@@ -1,10 +1,15 @@
 import React from 'react';
-import './Likes.css';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const LikeCounter = styled.p`
+    font-weight: bold;
+    padding-left: 15px;
+`;
 
 const Likes = props => {
     return(
-        <p className="post-likes">Likes {props.likes}</p>
+        <LikeCounter>Likes {props.likes}</LikeCounter>
     );
 }
 

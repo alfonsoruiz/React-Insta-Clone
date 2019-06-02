@@ -2,9 +2,8 @@ import React from 'react';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import PostControls from './PostControls/PostControls';
-import Likes from './Likes/Likes';
+import Likes from './Likes';
 import styled from 'styled-components';
-// import './Post.css';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
