@@ -3,8 +3,20 @@ import PostHeader from '../PostHeader/PostHeader';
 import CommentSection from '../../CommentSection/CommentSection';
 import PostControls from '../PostControls/PostControls';
 import Likes from '../Likes/Likes';
-import './Post.css';
+import styled from 'styled-components';
+// import './Post.css';
 import PropTypes from 'prop-types';
+
+const Wrapper = styled.div`
+    width: 700px;
+    border: 1px solid lightgrey;
+    margin-bottom: 50px;
+`;
+
+const PostImage = styled.img`
+    width: 100%;
+    height: auto;
+`;
 
 class Post extends React.Component {
     constructor(props) {
@@ -22,13 +34,13 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div className="post">
+            <Wrapper>
                 <PostHeader username={this.props.post.username} thumbnail={this.props.post.thumbnailUrl} />
-                <img className="post-img" src={this.props.post.imageUrl} alt="post thumbnail" />
+                <PostImage src={this.props.post.imageUrl} alt="post thumbnail" />
                 <PostControls incrementLikes={this.incrementLikes}/>
                 <Likes likes={this.state.likes}/>
                 <CommentSection comments={this.props.post.comments} likes={this.props.post.likes}/>
-            </div>
+            </Wrapper>
         );
     }
 }
