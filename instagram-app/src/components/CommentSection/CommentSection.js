@@ -1,6 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
-import CommentInput from './CommentInput/CommentInput';
+import CommentInput from './CommentInput';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
