@@ -1,8 +1,10 @@
 import React from 'react';
 import Comment from './Comment/Comment';
 import CommentInput from './CommentInput/CommentInput';
-import './CommentSection.css';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+const Wrapper = styled.section``;
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comment-section">
+            <Wrapper>
 
                 {this.state.comments.map(item => (
                     <Comment comment={item} key={item.id} />
@@ -42,7 +44,7 @@ class CommentSection extends React.Component {
                     captureComment={this.captureComment}
                     addNewComment={this.addNewComment}
                 />
-            </div>
+            </Wrapper>
         );
     }
 }

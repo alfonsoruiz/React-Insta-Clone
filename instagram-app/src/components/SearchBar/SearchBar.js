@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchInput from './SearchInput/SearchInput';
+import SearchInput from './SearchInput';
 import HeaderControls from './HeaderControls/HeaderControls';
 import './SearchBar.css'
 import styled from 'styled-components';
