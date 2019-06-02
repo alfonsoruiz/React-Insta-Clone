@@ -13,6 +13,7 @@ const Input = styled.input`
     padding: 5px;
     text-align: center;
 `;
+
 const SearchInput = props => {
     return (
         <Form onSubmit={props.filterPost}>

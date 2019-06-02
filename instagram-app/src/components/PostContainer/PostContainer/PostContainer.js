@@ -1,15 +1,22 @@
 import React from 'react';
 import Post from '../Post/Post';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
 
 const PostContainer = props => {
     return (
-        <div className="post-container">
+        <Wrapper>
             {props.post.map(item => (
                 <Post key={item.id} post={item} />
             ))}
-        </div>
+        </Wrapper>
     );
 };
 
