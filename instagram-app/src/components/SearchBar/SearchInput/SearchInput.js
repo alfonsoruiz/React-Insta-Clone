@@ -1,18 +1,30 @@
 import React from 'react';
-import './SearchInput.css';
+// import './SearchInput.css';
+import styled from 'styled-components';
 
+const Form = styled.form`
+    width: 30%;
+`;
+
+const Input = styled.input`
+    height: 15px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+`;
 const SearchInput = props => {
     return (
-        <form onSubmit={props.filterPost}>
-            <input
-                className="search-input"
+        <Form onSubmit={props.filterPost}>
+            <Input
                 type="text"
                 value={props.search}
                 placeholder="search"
                 name="search"
                 onChange={props.captureInput}
             />
-        </form>
+        </Form>
     );
 }
 
