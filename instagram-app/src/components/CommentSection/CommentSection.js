@@ -1,5 +1,5 @@
 import React from 'react';
-import Comment from './Comment/Comment';
+import Comment from './Comment';
 import CommentInput from './CommentInput/CommentInput';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
